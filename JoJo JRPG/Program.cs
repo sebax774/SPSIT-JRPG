@@ -6,7 +6,8 @@ namespace JoJo_JRPG
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Menu mainPage = new Menu();
+            mainPage.MenuGUI();
         }
     }
 }
