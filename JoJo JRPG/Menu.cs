@@ -135,34 +135,11 @@ namespace JoJo_JRPG
                         Console.WriteLine("Vybral si si písmeno N");
                         break;
                     }
-                case "L":
-                case "l":
-                    {
-                        Console.WriteLine("Vybral si si písmeno L");
-                        break;
-                    }
-                case "O":
-                case "o":
-                    {
-                        Console.WriteLine("Vybral si si písmeno O");
-                        break;
-                    }
                 case "C":
                 case "c":
                     {
                         Console.Clear();
                         Console.WriteLine(creditsASCIIart);
-                        System.Threading.Thread.Sleep(5000);
-                        Console.Clear();
-                        Menu mainPage = new Menu();
-                        mainPage.MenuGUI();
-                        break;
-                    }
-                case "S":
-                case "s":
-                    {
-                        Console.Clear();
-                        Console.WriteLine("This game was paid for by the starving african children and their souls. God bless America.");
                         System.Threading.Thread.Sleep(5000);
                         Console.Clear();
                         Menu mainPage = new Menu();
