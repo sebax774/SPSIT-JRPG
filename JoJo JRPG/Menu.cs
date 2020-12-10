@@ -12,29 +12,27 @@ namespace JoJo_JRPG
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Title = "JoJo's JRPG";
             string title = @"
-                  _______________________________________________________________________________________________________________________________________________________________________________________________________
-                  |                                                                                                                                                                                                     |
-                  |                                                                                                                                                                                                     |
-                  |                                                                                  ''''''                                                                                                             |
-                  |               JJJJJJJJJJJ                           JJJJJJJJJJJ                  '::::'                                JJJJJJJJJJJRRRRRRRRRRRRRRRRR   PPPPPPPPPPPPPPPPP           GGGGGGGGGGGGG     |
-                  |               J:::::::::J                           J:::::::::J                  '::::'                                J:::::::::JR::::::::::::::::R  P::::::::::::::::P       GGG::::::::::::G     |
-                  |               J:::::::::J                           J:::::::::J                  ':::''                                J:::::::::JR::::::RRRRRR:::::R P::::::PPPPPP:::::P    GG:::::::::::::::G     |
-                  |               JJ:::::::JJ                           JJ:::::::JJ                 ':::'                                  JJ:::::::JJRR:::::R     R:::::RPP:::::P     P:::::P  G:::::GGGGGGGG::::G     |
-                  |                 J:::::J     ooooooooooo               J:::::J     ooooooooooo   ''''       ssssssssss                    J:::::J    R::::R     R:::::R  P::::P     P:::::P G:::::G       GGGGGG     |
-                  |                 J:::::J   oo:::::::::::oo             J:::::J   oo:::::::::::oo          ss::::::::::s                   J:::::J    R::::R     R:::::R  P::::P     P:::::PG:::::G                   |
-                  |                 J:::::J  o:::::::::::::::o            J:::::J  o:::::::::::::::o       ss:::::::::::::s                  J:::::J    R::::RRRRRR:::::R   P::::PPPPPP:::::P G:::::G                   |
-                  |                 J:::::j  o:::::ooooo:::::o            J:::::j  o:::::ooooo:::::o       s::::::ssss:::::s                 J:::::j    R:::::::::::::RR    P:::::::::::::PP  G:::::G    GGGGGGGGGG     |
-                  |                 J:::::J  o::::o     o::::o            J:::::J  o::::o     o::::o        s:::::s  ssssss                  J:::::J    R::::RRRRRR:::::R   P::::PPPPPPPPP    G:::::G    G::::::::G     |
-                  |     JJJJJJJ     J:::::J  o::::o     o::::oJJJJJJJ     J:::::J  o::::o     o::::o          s::::::s           JJJJJJJ     J:::::J    R::::R     R:::::R  P::::P            G:::::G    GGGGG::::G     |
-                  |     J:::::J     J:::::J  o::::o     o::::oJ:::::J     J:::::J  o::::o     o::::o             s::::::s        J:::::J     J:::::J    R::::R     R:::::R  P::::P            G:::::G        G::::G     |
-                  |     J::::::J   J::::::J  o::::o     o::::oJ::::::J   J::::::J  o::::o     o::::o       ssssss   s:::::s      J::::::J   J::::::J    R::::R     R:::::R  P::::P             G:::::G       G::::G     |
-                  |     J:::::::JJJ:::::::J  o:::::ooooo:::::oJ:::::::JJJ:::::::J  o:::::ooooo:::::o       s:::::ssss::::::s     J:::::::JJJ:::::::J  RR:::::R     R:::::RPP::::::PP            G:::::GGGGGGGG::::G     |
-                  |      JJ:::::::::::::JJ   o:::::::::::::::o JJ:::::::::::::JJ   o:::::::::::::::o       s::::::::::::::s       JJ:::::::::::::JJ   R::::::R     R:::::RP::::::::P             GG:::::::::::::::G     |
-                  |        JJ:::::::::JJ      oo:::::::::::oo    JJ:::::::::JJ      oo:::::::::::oo         s:::::::::::ss          JJ:::::::::JJ     R::::::R     R:::::RP::::::::P               GGG::::::GGG:::G     |
-                  |          JJJJJJJJJ          ooooooooooo        JJJJJJJJJ          ooooooooooo            sssssssssss              JJJJJJJJJ       RRRRRRRR     RRRRRRRPPPPPPPPPP                  GGGGGG   GGGG     |
-                  |                                                                                                                                                                                                     |
-                  |                                                                                                                                                                                                     |
-                  |_____________________________________________________________________________________________________________________________________________________________________________________________________|
+                  
+                                                                                                                                                                                  
+                                                                                                                                                                                  
+                           SSSSSSSSSSSSSSS PPPPPPPPPPPPPPPPP      SSSSSSSSSSSSSSS IIIIIIIIIITTTTTTTTTTTTTTTTTTTTTTT               JJJJJJJJJJJRRRRRRRRRRRRRRRRR   PPPPPPPPPPPPPPPPP           GGGGGGGGGGGGG
+                         SS:::::::::::::::SP::::::::::::::::P   SS:::::::::::::::SI::::::::IT:::::::::::::::::::::T               J:::::::::JR::::::::::::::::R  P::::::::::::::::P       GGG::::::::::::G
+                        S:::::SSSSSS::::::SP::::::PPPPPP:::::P S:::::SSSSSS::::::SI::::::::IT:::::::::::::::::::::T               J:::::::::JR::::::RRRRRR:::::R P::::::PPPPPP:::::P    GG:::::::::::::::G
+                        S:::::S     SSSSSSSPP:::::P     P:::::PS:::::S     SSSSSSSII::::::IIT:::::TT:::::::TT:::::T               JJ:::::::JJRR:::::R     R:::::RPP:::::P     P:::::P  G:::::GGGGGGGG::::G
+                        S:::::S              P::::P     P:::::PS:::::S              I::::I  TTTTTT  T:::::T  TTTTTT                 J:::::J    R::::R     R:::::R  P::::P     P:::::P G:::::G       GGGGGG
+                        S:::::S              P::::P     P:::::PS:::::S              I::::I          T:::::T                         J:::::J    R::::R     R:::::R  P::::P     P:::::PG:::::G              
+                         S::::SSSS           P::::PPPPPP:::::P  S::::SSSS           I::::I          T:::::T                         J:::::J    R::::RRRRRR:::::R   P::::PPPPPP:::::P G:::::G              
+                          SS::::::SSSSS      P:::::::::::::PP    SS::::::SSSSS      I::::I          T:::::T                         J:::::j    R:::::::::::::RR    P:::::::::::::PP  G:::::G    GGGGGGGGGG
+                            SSS::::::::SS    P::::PPPPPPPPP        SSS::::::::SS    I::::I          T:::::T                         J:::::J    R::::RRRRRR:::::R   P::::PPPPPPPPP    G:::::G    G::::::::G
+                               SSSSSS::::S   P::::P                   SSSSSS::::S   I::::I          T:::::T             JJJJJJJ     J:::::J    R::::R     R:::::R  P::::P            G:::::G    GGGGG::::G
+                                    S:::::S  P::::P                        S:::::S  I::::I          T:::::T             J:::::J     J:::::J    R::::R     R:::::R  P::::P            G:::::G        G::::G
+                                    S:::::S  P::::P                        S:::::S  I::::I          T:::::T             J::::::J   J::::::J    R::::R     R:::::R  P::::P             G:::::G       G::::G
+                        SSSSSSS     S:::::SPP::::::PP          SSSSSSS     S:::::SII::::::II      TT:::::::TT           J:::::::JJJ:::::::J  RR:::::R     R:::::RPP::::::PP            G:::::GGGGGGGG::::G
+                        S::::::SSSSSS:::::SP::::::::P          S::::::SSSSSS:::::SI::::::::I      T:::::::::T            JJ:::::::::::::JJ   R::::::R     R:::::RP::::::::P             GG:::::::::::::::G
+                        S:::::::::::::::SS P::::::::P          S:::::::::::::::SS I::::::::I      T:::::::::T              JJ:::::::::JJ     R::::::R     R:::::RP::::::::P               GGG::::::GGG:::G
+                         SSSSSSSSSSSSSSS   PPPPPPPPPP           SSSSSSSSSSSSSSS   IIIIIIIIII      TTTTTTTTTTT                JJJJJJJJJ       RRRRRRRR     RRRRRRRPPPPPPPPPP                  GGGGGG   GGGG
+                                                                                                                                                                                  
+                                                                                                                                                                                  
 
             ";
             Console.WriteLine(title);
