@@ -10,7 +10,7 @@ namespace JoJo_JRPG
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.BackgroundColor = ConsoleColor.Black;
-            Console.Title = "JoJo's JRPG";
+            Console.Title = "SPSIT JRPG";
             string title = @"
                   
                                                                                                                                                                                   
@@ -130,7 +130,9 @@ namespace JoJo_JRPG
                 case "N":
                 case "n":
                     {
-                        Console.WriteLine("Vybral si si písmeno N");
+                        Console.Clear();
+                        Story introPage = new Story();
+                        introPage.IntroStory();
                         break;
                     }
                 case "C":
