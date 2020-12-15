@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace JoJo_JRPG
 {
@@ -11,6 +12,9 @@ namespace JoJo_JRPG
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Title = "SPSIT JRPG";
+            string DudoveHP = File.ReadAllText(@"C:/Temp/DudoHP.txt");
+            string VirdzoveHP = File.ReadAllText(@"C:/Temp/VirdzoHP.txt");
+            string turn = File.ReadAllText(@"C:/Temp/Turn.txt");
             string bojovaObrazovka = @"
                  _____                                                                                                                                            __      __
                 |  __ \                                                                                                                                           \ \    / /
@@ -63,6 +67,7 @@ namespace JoJo_JRPG
 
 
 ";
+            Console.WriteLine("                " + DudoveHP + "/100" + "                                                                                                                                            " + VirdzoveHP + "/100");
             Console.WriteLine(bojovaObrazovka);
             Console.ReadKey();
         }

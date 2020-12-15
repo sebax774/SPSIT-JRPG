@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace JoJo_JRPG
 {
@@ -40,6 +41,32 @@ namespace JoJo_JRPG
 
                         PRESS ANYTHING TO CONTINUE
 ";
+            if (File.Exists(@"C:/Temp/DudoHP.txt") || File.Exists(@"C:/Temp/Virdzo.HP.txt") || File.Exists(@"C:/Temp/Turn.txt"))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Please clear C:/Temp of DudoHP.txt VirdzoHP.txt and Turn.txt");
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
+                return;
+            }
+            else
+            {
+                TextWriter tx = new StreamWriter("C:/Temp/DudoHP.txt", true);
+                tx.Write("100");
+                tx.Close();
+
+                TextWriter ty = new StreamWriter("C:/Temp/VirdzoHP.txt", true);
+                ty.Write("100");
+                ty.Close();
+
+                TextWriter tz = new StreamWriter("C:/Temp/Turn.txt", true);
+                tz.Write("1");
+                tz.Close();
+            }
+            
+
+
+
             Console.WriteLine(pribeh);
             Console.ReadKey();
             Console.Clear();
