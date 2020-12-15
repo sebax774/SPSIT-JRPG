@@ -14,7 +14,6 @@ namespace JoJo_JRPG
             Console.Title = "SPSIT JRPG";
             string DudoveHP = File.ReadAllText(@"C:/Temp/DudoHP.txt");
             string VirdzoveHP = File.ReadAllText(@"C:/Temp/VirdzoHP.txt");
-            string turn = File.ReadAllText(@"C:/Temp/Turn.txt");
             string bojovaObrazovka = @"
                  _____                                                                                                                                            __      __
                 |  __ \                                                                                                                                           \ \    / /

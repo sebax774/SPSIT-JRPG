@@ -43,7 +43,6 @@ namespace JoJo_JRPG
 ";
             File.WriteAllText(@"C:/Temp/DudoHP.txt", "100");
             File.WriteAllText(@"C:/Temp/VirdzoHP.txt", "100");
-            File.WriteAllText(@"C:/Temp/Turn.txt", "1");
 
 
 
