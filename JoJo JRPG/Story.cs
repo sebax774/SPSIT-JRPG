@@ -41,29 +41,11 @@ namespace JoJo_JRPG
 
                         PRESS ANYTHING TO CONTINUE
 ";
-            if (File.Exists(@"C:/Temp/DudoHP.txt") || File.Exists(@"C:/Temp/Virdzo.HP.txt") || File.Exists(@"C:/Temp/Turn.txt"))
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Please clear C:/Temp of DudoHP.txt VirdzoHP.txt and Turn.txt");
-                Console.WriteLine("Press any key to continue");
-                Console.ReadKey();
-                return;
-            }
-            else
-            {
-                TextWriter tx = new StreamWriter("C:/Temp/DudoHP.txt", true);
-                tx.Write("100");
-                tx.Close();
+            File.WriteAllText(@"C:/Temp/DudoHP.txt", "100");
+            File.WriteAllText(@"C:/Temp/VirdzoHP.txt", "100");
+            File.WriteAllText(@"C:/Temp/Turn.txt", "1");
 
-                TextWriter ty = new StreamWriter("C:/Temp/VirdzoHP.txt", true);
-                ty.Write("100");
-                ty.Close();
 
-                TextWriter tz = new StreamWriter("C:/Temp/Turn.txt", true);
-                tz.Write("1");
-                tz.Close();
-            }
-            
 
 
 
