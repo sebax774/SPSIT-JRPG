@@ -11,6 +11,7 @@ namespace JoJo_JRPG
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Title = "SPSIT JRPG";
+            erika:
             string title = @"
                   
                                                                                                                                                                                   
@@ -121,8 +122,7 @@ namespace JoJo_JRPG
 
 
 ";
-
-
+            pipik:
             char dudo = Convert.ToChar(Console.Read());
             string dudoString = dudo.ToString();
             switch (dudoString)
@@ -151,14 +151,18 @@ namespace JoJo_JRPG
                     {
                         return;
                     }
+                case "\r":
+                case "\n":
+                    {
+                        goto pipik;
+                    }
                 default:
                     {
+                        Console.Clear();
                         Console.WriteLine("You picked a invalid option! Please wait until this message is gone to pick another one.");
                         System.Threading.Thread.Sleep(2000);
                         Console.Clear();
-                        Menu mainPage = new Menu();
-                        mainPage.MenuGUI();
-                        break;
+                        goto erika;
                     }
             }
             
