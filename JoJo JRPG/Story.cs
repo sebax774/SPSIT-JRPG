@@ -41,13 +41,6 @@ namespace JoJo_JRPG
 
                         PRESS ANYTHING TO CONTINUE
 ";
-            File.WriteAllText(@"C:/Temp/DudoHP.txt", "100");
-            File.WriteAllText(@"C:/Temp/VirdzoHP.txt", "100");
-
-
-
-
-
             Console.WriteLine(pribeh);
             Console.ReadKey();
             Console.Clear();

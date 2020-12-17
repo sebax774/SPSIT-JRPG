@@ -9,6 +9,8 @@ namespace JoJo_JRPG
     {
         public void CombatGUI()
         {
+            int DudoveHP = 100;
+            int VirdzoveHP = 100;
             Random rnd = new Random();
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.BackgroundColor = ConsoleColor.Black;
@@ -66,23 +68,17 @@ namespace JoJo_JRPG
 
 ";
             pindik:
-            
-            string DudoveHP = File.ReadAllText(@"C:/Temp/DudoHP.txt");
-            int DudoveHPint = Int32.Parse(DudoveHP);
-            string VirdzoveHP = File.ReadAllText(@"C:/Temp/VirdzoHP.txt");
-            int VirdzoveHPint = Int32.Parse(VirdzoveHP);
-
             Console.WriteLine("                " + DudoveHP + "/100" + "                                                                                                                                            " + VirdzoveHP + "/100");
             Console.WriteLine(bojovaObrazovka);
 
 
-            if (1 > DudoveHPint)
+            if (1 > DudoveHP)
             {
                 Console.Clear();
                 GameOver GameOverPage = new GameOver();
                 GameOverPage.GameOverGUI();
             }
-            if (1 > VirdzoveHPint)
+            if (1 > VirdzoveHP)
             {
                 Console.Clear();
                 Win WinPage = new Win();
@@ -99,22 +95,14 @@ namespace JoJo_JRPG
                 case "A":
                     {
                         int attackP = rnd.Next(20);
-                        int attackPoutputInt = VirdzoveHPint - attackP;
-                        string attackPoutput = attackPoutputInt.ToString();
-                        File.WriteAllText(@"C:/Temp/VirdzoHP.txt", attackPoutput);
+                        VirdzoveHP = VirdzoveHP - attackP;
                         goto cicina;
                     }
                 case "h":
                 case "H":
                     {
                         int healP = rnd.Next(20, 40);
-                        int healPoutputInt = DudoveHPint + healP;
-                        if (DudoveHPint >= 100)
-                            healPoutputInt = 100;
-                        else
-                            DudoveHPint = healPoutputInt;
-                        string healPoutput = healPoutputInt.ToString();
-                        File.WriteAllText(@"C:/Temp/DudoHP.txt", healPoutput);
+                        DudoveHP = DudoveHP + healP;
                         goto cicina;
                     }
                 case "\r":
@@ -137,23 +125,21 @@ namespace JoJo_JRPG
 
             int dudovaRit = rnd.Next(10, 12);
 
-            if (1 > DudoveHPint)
+            if (1 > DudoveHP)
             {
                 Console.Clear();
                 GameOver GameOverPage = new GameOver();
                 GameOverPage.GameOverGUI();
             }
 
-            if (VirdzoveHPint >= 50)
+            if (VirdzoveHP >= 50)
             {
                 int attackAI = rnd.Next(20);
-                int attackAIoutputInt = DudoveHPint - attackAI;
-                string attackAIoutput = attackAIoutputInt.ToString();
-                File.WriteAllText(@"C:/Temp/DudoHP.txt", attackAIoutput);
+                DudoveHP = DudoveHP - attackAI;
                 Console.Clear();
                 goto pindik;
             }
-            else if (49 >= VirdzoveHPint && VirdzoveHPint >= 1)
+            else if (49 >= VirdzoveHP && VirdzoveHP >= 1)
             {
                 if (dudovaRit <= 10)
                 {
@@ -161,17 +147,11 @@ namespace JoJo_JRPG
                     goto pindik;
                 }
                 int healAI = rnd.Next(40);
-                int healAIoutputInt = VirdzoveHPint + healAI;
-                if (VirdzoveHPint >= 100)
-                    healAIoutputInt = 100;
-                else
-                    VirdzoveHPint = healAIoutputInt;
-                string healAIoutput = healAIoutputInt.ToString();
-                File.WriteAllText(@"C:/Temp/VirdzoHP.txt", healAIoutput);
+                VirdzoveHP = VirdzoveHP + healAI;
                 Console.Clear();
                 goto pindik;
             }
-            else if (1 > VirdzoveHPint)
+            else if (1 > VirdzoveHP)
             {
                 Console.Clear();
                 Win WinPage = new Win();
